@@ -1,13 +1,17 @@
+def fizz_buzz(n):
+    for i in range(1, n + 1):
+        output = ''
+        if i % 3 == 0:
+            output += 'Fizz'
+        if i % 5 == 0:
+            output += 'Buzz'
+        if not output:
+            output = str(i)
+        print(output)
+
+
 n = int(input('Введите число: '))
 if n <= 1:
     n = 3
 
-for n in range(1,n):
-    string = ' '
-    if (n % 3 == 0):
-        string = string + "Fizz"
-    if (n % 5 == 0):
-        string = string + "Buzz"
-    if (n % 3 != 0 and n % 5 != 0):
-        string = string + str(n)
-    print(string, end = '')
+fizz_buzz(n)
